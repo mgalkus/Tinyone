@@ -1,0 +1,37 @@
+// CCComponent file is for components such as buttons, navbars, cards, anything that is reusable. Since we have a small project our component file should be manageable.
+
+
+.container {
+    max-width: 68%;
+    margin: auto;
+}
+
+h1,
+h2,
+h4 {
+    font-family: myriad-pro, sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3,
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #898989;
+    font-weight: normal;
+    text-align: center;
+
+}
+
+h3 {
+    margin-top: 20px;
+    width: 100%;
+}
+
+h4 {
+    font-size: 18px;
+}
