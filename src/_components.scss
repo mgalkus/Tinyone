@@ -1,5 +1,8 @@
 // CCComponent file is for components such as buttons, navbars, cards, anything that is reusable. Since we have a small project our component file should be manageable.
 
+section {
+    min-height: 100vh;
+}
 
 .container {
     max-width: 68%;
@@ -34,4 +37,11 @@ h3 {
 
 h4 {
     font-size: 18px;
+}
+
+.button {
+    border: 2px solid #000;
+    font-family: myriad-pro, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
 }
