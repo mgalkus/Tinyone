@@ -40,13 +40,14 @@
     </header>
     <section class="landing">
         <div class="container">
-            <h1>Inspire your inspiration</h1>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga obcaecati nihil asperiores atque
-                molestias omnis veritatis rerum pariatur! Aspernatur fugit ex itaque nam nisi mollitia?</h3>
-            <a href="">
-                <div class="start button">Get Start</div>
-            </a>
-
+            <div class="wrapper">
+                <h1>Inspire your inspiration</h1>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga obcaecati nihil asperiores atque
+                    molestias omnis veritatis rerum pariatur! Aspernatur fugit ex itaque nam nisi mollitia?</h3>
+                <a href="">
+                    <div class="start button">Get Start</div>
+                </a>
+            </div>
         </div>
         <a href="#features">
             <img src="images/long-arrow-alt-down-solid.svg" alt="Down">
@@ -57,7 +58,7 @@
             <h2>Tinyone features</h2>
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A quo cupiditate pariatur enim esse quis
                 libero aperiam nihil alias iusto libero aperiam nihil alias iustolibero aperiam nihil alias iusto?</h3>
-            <div class="feature">
+            <div class="feature flexChild">
                 <div class="featureWrapper">
                     <h4>Fully responsive</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum blanditiis officiis earum
@@ -65,14 +66,14 @@
                 </div>
                 <img src="images/tablet-alt-solid.svg" alt="Tablet">
             </div>
-            <div class="feature">
+            <div class="feature flexChild">
                 <div class="featureWrapper">
                     <h4>Fully Layered PSD</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, nesciunt?</p>
                 </div>
                 <img src="images/lemon-regular.svg" alt="Lemon">
             </div>
-            <div class="feature">
+            <div class="feature flexChild">
                 <div class="featureWrapper">
                     <h4>Font Awesome Icons</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum blanditiis officiis earum
@@ -80,14 +81,14 @@
                 </div>
                 <img src="images/envelope-regular.svg" alt="Folder">
             </div>
-            <div class="feature">
+            <div class="feature flexChild">
                 <div class="featureWrapper">
                     <h4>HTML3 & CSS3</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, nesciunt?</p>
                 </div>
                 <img src="images/code-solid.svg" alt="Code">
             </div>
-            <div class="feature">
+            <div class="feature flexChild">
                 <div class="featureWrapper">
                     <h4>Email Template</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum blanditiis officiis earum
@@ -95,7 +96,7 @@
                 </div>
                 <img src="images/envelope-regular.svg" alt="Mail">
             </div>
-            <div class="feature">
+            <div class="feature flexChild">
                 <div class="featureWrapper">
                     <h4>Free to download</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, nesciunt?</p>
@@ -109,7 +110,7 @@
             <h2>Pricing and Free Trial</h2>
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolor quae ipsum quia doloribus
                 consequuntur harum quod distinctio sapiente adipisci!</h3>
-            <div class="plan">
+            <div class="plan flexChild">
                 <div class="circle"><img src="images/tablet-alt-solid.svg" alt="Tablet"> </div>
                 <h4 class="planName">Basic</h4>
                 <p class="planDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
@@ -118,7 +119,7 @@
                 <p>free forever</p>
                 <div class="price button">Get free now</div>
             </div>
-            <div class="plan">
+            <div class="plan flexChild">
                 <div class="circle black"><img class="inverted" src="images/laptop-solid.svg" alt="Laptop"> </div>
                 <h4 class="planName">Standart</h4>
                 <p class="planDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
@@ -127,7 +128,7 @@
                 <p>month</p>
                 <div class="price button">Upgrade</div>
             </div>
-            <div class="plan">
+            <div class="plan flexChild">
                 <div class="circle"><img src="images/desktop-solid.svg" alt="Desktop"> </div>
                 <h4 class="planName">Enterprise</h4>
                 <p class="planDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
@@ -143,97 +144,227 @@
             <h2>Our works</h2>
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolor quae ipsum quia doloribus
                 consequuntur harum quod distinctio sapiente adipisci!</h3>
-            <div class="work">
-                <div class="photoBox">
-                    <div class="photoContent">
-                        <img src="images/blogging-business-coding.jpg" alt="Responsive">
-                        <div class="likes"></div>
-                        <div class="date"></div>
+            <div class="work flexChild">
+                <div class="photoWrapper">
+                    <div class="photoBox" style="background-image: url(images/adult-architecture-building-1170041.jpg)">
+                    </div>
+                    <div class="left">
+                        <img src="images/eye-regular.svg" alt="">
+                        <div class="likes">279</div>
+                    </div>
+                    <div class="right">
+                        <time datetime="2019-02-27">2019/02/27</time>
+                        <img src="images/eye-regular.svg" alt="">
                     </div>
                 </div>
                 <h4>Fully Responsive</h4>
                 <p>Design / Branding</p>
             </div>
-            <div class="work">
-                <div class="photoBox">
-                    <div class="photoContent">
-                        <img src="images/harpal-singh-396280-unsplash.jpg" alt="Icons">
-                        <div class="likes"></div>
-                        <div class="date"></div>
+            <div class="work flexChild">
+                <div class="photoWrapper">
+                    <div class="photoBox" style="background-image: url(images/harpal-singh-396280-unsplash.jpg)">
+                    </div>
+                    <div class="left">
+                        <img src="images/eye-regular.svg" alt="">
+                        <div class="likes">279</div>
+                    </div>
+                    <div class="right">
+                        <time datetime="2019-02-27">2019/02/27</time>
+                        <img src="images/eye-regular.svg" alt="">
                     </div>
                 </div>
                 <h4>Font Awesome Icons</h4>
                 <p>Design / Branding</p>
             </div>
-            <div class="work">
-                <div class="photoBox">
-                    <div class="photoContent">
-                        <img src="images/adult-architecture-building-1170041.jpg" alt="Design">
-                        <div class="likes"></div>
-                        <div class="date"></div>
+            <div class="work flexChild">
+                <div class="photoWrapper">
+                    <div class="photoBox" style="background-image: url(images/blogging-business-coding.jpg)">
+                    </div>
+                    <div class="left">
+                        <img src="images/eye-regular.svg" alt="">
+                        <div class="likes">279</div>
+                    </div>
+                    <div class="right">
+                        <time datetime="2019-02-27">2019/02/27</time>
+                        <img src="images/eye-regular.svg" alt="">
                     </div>
                 </div>
                 <h4>HTML3 & CSS3</h4>
-                <p>App Design</p>
+                <p>App Development</p>
             </div>
-            <div class="work">
-                <div class="photoBox">
-                    <div class="photoContent">
-                        <img src="images/app-background-blur-545331.jpg" alt="Layouts">
-                        <div class="likes"></div>
-                        <div class="date"></div>
+            <div class="work flexChild">
+                <div class="photoWrapper">
+                    <div class="photoBox" style="background-image: url(images/ron-mcclenny-692810-unsplash.jpg)">
+                    </div>
+                    <div class="left">
+                        <img src="images/eye-regular.svg" alt="">
+                        <div class="likes">279</div>
+                    </div>
+                    <div class="right">
+                        <time datetime="2019-02-27">2019/02/27</time>
+                        <img src="images/eye-regular.svg" alt="">
                     </div>
                 </div>
-                <h4>Various Layouts</h4>
+                <h4>Various Layouts </h4>
                 <p>Branding</p>
             </div>
-            <div class="work">
-                <div class="photoBox">
-                    <div class="photoContent">
-                        <img src="images/adult-architecture-building-1170041.jpg" alt="Responsive">
-                        <div class="likes"></div>
-                        <div class="date"></div>
+            <div class="work flexChild">
+                <div class="photoWrapper">
+                    <div class="photoBox" style="background-image: url(images/taras-shypka-424932-unsplash.jpg)">
+                    </div>
+                    <div class="left">
+                        <img src="images/eye-regular.svg" alt="">
+                        <div class="likes">279</div>
+                    </div>
+                    <div class="right">
+                        <time datetime="2019-02-27">2019/02/27</time>
+                        <img src="images/eye-regular.svg" alt="">
                     </div>
                 </div>
                 <h4>Fully Responsive</h4>
                 <p>Design / Branding</p>
             </div>
-            <div class="work">
-                <div class="photoBox">
-                    <div class="photoContent">
-                        <img src="images/chair-comfort-computer-1785893.jpg" alt="Icons">
-                        <div class="likes"></div>
-                        <div class="date"></div>
+            <div class="work flexChild">
+                <div class="photoWrapper">
+                    <div class="photoBox" style="background-image: url(images/pineapple-supply-co-253178-unsplash.jpg)">
+                    </div>
+                    <div class="left">
+                        <img src="images/eye-regular.svg" alt="">
+                        <div class="likes">279</div>
+                    </div>
+                    <div class="right">
+                        <time datetime="2019-02-27">2019/02/27</time>
+                        <img src="images/eye-regular.svg" alt="">
                     </div>
                 </div>
                 <h4>Font Awesome Icons</h4>
                 <p>Design / Branding</p>
             </div>
-            <div class="work">
-                <div class="photoBox">
-                    <div class="photoContent">
-                        <img src="images/art-background-citrus-1415734.jpg" alt="Design">
-                        <div class="likes"></div>
-                        <div class="date"></div>
+            <div class="work flexChild">
+                <div class="photoWrapper">
+                    <div class="photoBox" style="background-image: url(images/linkedin-sales-navigator-402853-unsplash.jpg)">
+                    </div>
+                    <div class="left">
+                        <img src="images/eye-regular.svg" alt="">
+                        <div class="likes">279</div>
+                    </div>
+                    <div class="right">
+                        <time datetime="2019-02-27">2019/02/27</time>
+                        <img src="images/eye-regular.svg" alt="">
                     </div>
                 </div>
                 <h4>HTML3 & CSS3</h4>
-                <p>App Design</p>
+                <p>App Development</p>
             </div>
-            <div class="work">
-                <div class="photoBox">
-                    <div class="photoContent">
-                        <img src="images/aroma-background-black-1415555.jpg" alt="Layouts">
-                        <div class="likes"></div>
-                        <div class="date"></div>
+            <div class="work flexChild">
+                <div class="photoWrapper">
+                    <div class="photoBox" style="background-image: url(images/app-background-blur-545331.jpg)">
+                    </div>
+                    <div class="left">
+                        <img src="images/eye-regular.svg" alt="">
+                        <div class="likes">279</div>
+                    </div>
+                    <div class="right">
+                        <time datetime="2019-02-27">2019/02/27</time>
+                        <img src="images/eye-regular.svg" alt="">
                     </div>
                 </div>
-                <h4>Various Layouts</h4>
+                <h4>Various Layouts </h4>
                 <p>Branding</p>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="team">
+        <div class="container">
+            <h2>Our team</h2>
+            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolor quae ipsum quia doloribus
+                consequuntur harum quod distinctio sapiente adipisci!</h3>
+            <div class="member flexChild">
+                <div class="photoBox" style="background-image: url(images/face-facial-hair-fine-looking-614810.jpg)"></div>
+                <h4>John Doe</h4>
+                <p>UI Designer</p>
+                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="socialMemberContainer">
+                    <a href=""> <img src="images/facebook-f-brands.svg" alt="Facebook">
+                    </a>
+                    <a href=""> <img src="images/twitter-brands.svg" alt="Twitter">
+                    </a>
+                    <a href=""> <img src="images/linkedin-in-brands.svg" alt="Linkedin">
+                    </a>
+                </div>
+            </div>
+            <div class="member flexChild">
+                <div class="photoBox" style="background-image: url(images/beautiful-beauty-casual-762020.jpg)"></div>
+                <h4>John Doe</h4>
+                <p>UI Designer</p>
+                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="socialMemberContainer">
+                    <a href=""> <img src="images/facebook-f-brands.svg" alt="Facebook">
+                    </a>
+                    <a href=""> <img src="images/twitter-brands.svg" alt="Twitter">
+                    </a>
+                    <a href=""> <img src="images/linkedin-in-brands.svg" alt="Linkedin">
+                    </a>
+                </div>
+            </div>
+            <div class="member flexChild">
+                <div class="photoBox" style="background-image: url(images/adult-beard-boy-220453.jpg)"></div>
+                <h4>John Doe</h4>
+                <p>UI Designer</p>
+                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="socialMemberContainer">
+                    <a href=""> <img src="images/facebook-f-brands.svg" alt="Facebook">
+                    </a>
+                    <a href=""> <img src="images/twitter-brands.svg" alt="Twitter">
+                    </a>
+                    <a href=""> <img src="images/linkedin-in-brands.svg" alt="Linkedin">
+                    </a>
+                </div>
+            </div>
+            <div class="member flexChild">
+                <div class="photoBox" style="background-image: url(images/beard-boy-casual-1222271.jpg)"></div>
+                <h4>John Doe</h4>
+                <p>UI Designer</p>
+                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="socialMemberContainer">
+                    <a href=""> <img src="images/facebook-f-brands.svg" alt="Facebook">
+                    </a>
+                    <a href=""> <img src="images/twitter-brands.svg" alt="Twitter">
+                    </a>
+                    <a href=""> <img src="images/linkedin-in-brands.svg" alt="Linkedin">
+                    </a>
+                </div>
+            </div>
+    </section>
+    <section class="stats">
+        <div class="container">
+            <h2>Stat & Testimonials</h2>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, illum pariatur eaque optio natus
+                veniam mollitia perspiciatis inventore deserunt quod?</h3>
+            <div class="stat flexChild">
+                <img src="images/puzzle-piece-solid.svg" alt="Puzzle">
+                <h4>20</h4>
+                <p>Products</p>
+            </div>
+            <div class="stat flexChild">
+                <img src="images/puzzle-piece-solid.svg" alt="Puzzle">
+                <h4>20</h4>
+                <p>Products</p>
+            </div>
+            <div class="stat flexChild">
+                <img src="images/puzzle-piece-solid.svg" alt="Puzzle">
+                <h4>20</h4>
+                <p>Products</p>
+            </div>
+            <div class="stat flexChild">
+                <img src="images/puzzle-piece-solid.svg" alt="Puzzle">
+                <h4>20</h4>
+                <p>Products</p>
             </div>
         </div>
     </section>
-
 
 
 </body>

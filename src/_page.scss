@@ -8,7 +8,7 @@ header {
         justify-content: space-between;
         align-items: center;
         padding-top: 50px;
-        height: 90px; //Padding+image height
+        height: 90px; // Equals padding+image height
 
 
         .menu {
@@ -48,35 +48,34 @@ header {
 }
 
 section.landing {
-    min-height: calc(100vh - 90px); // Header's height subtracted so that header+landing take all screen height
     background-color: #fcdb00;
-    position: relative;
 
     .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        min-height: calc(100vh - 90px); // Header's height subtracted so that header+landing take all screen height.
+        align-items: center;
+        flex-wrap: wrap;
+
+        .wrapper {
+
+            h1 {
+                font-size: 45px;
+
+            }
+
+            h3 {
+                color: #000;
 
 
-        h1 {
-            font-size: 45px;
+            }
 
-        }
-
-        h3 {
-            color: #000;
-
-
-        }
-
-        .start.button {
-            display: block;
-            margin: auto;
-            margin-top: 35px;
-            width: 200px;
-            padding: 14px 30px;
-
+            .start.button {
+                display: block;
+                margin: auto;
+                margin-top: 35px;
+                width: 200px;
+                padding: 14px 30px;
+                
+            }
         }
     }
 
@@ -86,151 +85,222 @@ section.landing {
         bottom: 15px;
         left: 50%;
         transform: translateX(-50%);
-
     }
 }
 
 section.features {
     .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
         margin: 110px auto;
-    }
 
-    .feature {
-        position: relative; // So I can move the image it contains
-        width: 30%;
-        margin-top: 90px;
-        display: flex;
-        text-align: left;
+        .feature {
+            position: relative; // So I can move the image it contains
+            width: 30%;
+            display: flex;
+            text-align: left;
 
-        .featureWrapper {
-            margin-left: 35px; // So it does not cover the image
-            padding-left: 24px;
+            .featureWrapper {
+                margin-left: 35px; // So it does not cover the image
+                padding-left: 24px;
 
-            p {
-                margin-top: 15px;
+                p {
+                    margin-top: 15px;
+                }
+            }
+
+            img {
+                position: absolute;
+                width: 35px;
+                left: 0;
             }
         }
 
-
-        img {
-            position: absolute;
-            width: 35px;
-            left: 0;
-        }
     }
-
-
 }
 
 section.pricing {
 
     .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+        margin: 110px auto;
 
-    .plan {
-        margin-top: 70px;
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        .plan {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
 
-        .circle {
-            position: relative;
-            height: 95px;
-            width: 95px;
-            border-radius: 50%;
-            background-color: #ebebeb;
+            .circle {
+                position: relative;
+                height: 95px;
+                width: 95px;
+                border-radius: 50%;
+                background-color: #ebebeb;
 
-            img {
-                position: absolute;
-                height: 35px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                img {
+                    position: absolute;
+                    height: 35px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                img.inverted {
+                    filter: invert(100%);
+                }
             }
 
-            img.inverted {
-                filter: invert(100%);
+            .circle.black {
+                background-color: #000;
+
             }
-        }
 
-        .circle.black {
-            background-color: #000;
+            h4.planName {
+                margin: 20px 0;
+            }
 
-        }
+            p.planDescription {
+                line-height: 1.5;
 
-        h4.planName {
-            margin: 20px 0;
-        }
+            }
 
-        p.planDescription {
-            line-height: 1.5;
+            h4.price {
+                margin-top: 30px;
+                text-transform: uppercase;
+                font-size: 25px;
+            }
 
-        }
+            .line {
+                width: 40px;
+                border-bottom: 2px solid #000;
+                margin: 3px 0;
+            }
 
-        h4.price {
-            margin-top: 30px;
-            text-transform: uppercase;
-            font-size: 25px;
-        }
-
-        .line {
-            width: 40px;
-            border-bottom: 2px solid #000;
-            margin: 3px 0;
-        }
-
-        .button {
-            margin-top: 30px;
-            padding: 15px;
+            .button {
+                margin-top: 30px;
+                padding: 15px;
+            }
         }
     }
 }
 
 section.works {
     .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
         margin: 110px auto;
 
-    }
+        .work {
+            width: 24%;
 
-    .work {
-        width: 24%;
-        margin-top: 60px;
+            .photoWrapper {
+                display: flex;
+                position: relative; // So I can move .left and .right divs according to it.
 
-        .photoBox {
-            width: 100%;
-            padding-top: 100%;
-            /* 1:1 Aspect Ratio */
-            position: relative;
-            /* If you want text inside of it */
-            overflow: hidden;
+                .photoBox {
+                    @include squarePhoto;
+                }
 
+                &:hover {
+                    opacity: 0.5;
+                    transition: .3s ease;
+                }
 
+                &:hover .left,
+                &:hover .right {
+                    transition: .3s ease;
+                    opacity: 1;
+                }
 
-            .photoContent img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                zoom: 0.1; //kaip dar kitaip padaryt mazesni, bet kad mazinant ekrana jis nemazetu??
+                .left,
+                .right {
+                    opacity: 0;
+                    position: absolute;
+                    bottom: 0;
+                    display: flex;
+                    color: #ffffff;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-size: 10px;
+                }
+
+                .left {
+                    left: 0;
+                }
+
+                .right {
+                    right: 0;
+                }
+
+                .left img,
+                .right img {
+                    height: 15px;
+                    filter: invert(100%);
+                    margin: 0 5px;
+                }
+            }
+
+            h4,
+                {
+                margin-top: 20px;
+            }
+
+            p {
+                margin-top: 10px;
             }
         }
 
-
-
-
-
-
     }
+}
 
+section.team {
+    .container {
+        margin: 110px auto;
 
+        .member {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .photoBox {
+            @include squarePhoto;
+            width: 80%;
+            border-radius: 50%;
+
+        }
+
+        h4,
+            {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        p.small {
+            font-size: 14px;
+            color: #686d74;
+        }
+
+        .socialMemberContainer {
+            width: 100%;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 15px;
+                margin: 0 5px;
+            }
+        }
+    }
+}
+
+section.stats {
+    .container {
+        .stat {
+            img {
+                width: 40px;
+            }
+        }
+    }
 }

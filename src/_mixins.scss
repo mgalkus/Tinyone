@@ -11,4 +11,18 @@
 //     @include heading2;
 // }
 
+@mixin squarePhoto {
+    width: 100%;
+    position: relative;
+    background-size: cover; // Manages images
+    background-position: center; // Manages images
 
+
+    &:before {
+        // Makes div height same as width
+        content: "";
+        display: block;
+        padding-top: 100%;
+        /* initial ratio of 1:1*/
+    }
+}
