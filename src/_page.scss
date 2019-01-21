@@ -4,8 +4,6 @@ header {
 
     .container {
         position: relative;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
         padding-top: 50px;
         height: 90px; // Equals padding+image height
@@ -17,7 +15,7 @@ header {
 
         }
 
-        .logoContainer {
+        .logo-container {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -36,7 +34,7 @@ header {
             }
         }
 
-        .socialContainer {
+        .social-container {
 
             img {
                 height: 20px;
@@ -52,20 +50,21 @@ section.landing {
 
     .container {
         min-height: calc(100vh - 90px); // Header's height subtracted so that header+landing take all screen height.
+        display: flex;
+        justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+
 
         .wrapper {
+            width: 490px;
 
             h1 {
                 font-size: 45px;
-
             }
 
             h3 {
                 color: #000;
-
-
+                padding: 0;
             }
 
             .start.button {
@@ -74,7 +73,7 @@ section.landing {
                 margin-top: 35px;
                 width: 200px;
                 padding: 14px 30px;
-                
+
             }
         }
     }
@@ -90,15 +89,13 @@ section.landing {
 
 section.features {
     .container {
-        margin: 110px auto;
-
         .feature {
             position: relative; // So I can move the image it contains
             width: 30%;
             display: flex;
             text-align: left;
 
-            .featureWrapper {
+            .feature-wrapper {
                 margin-left: 35px; // So it does not cover the image
                 padding-left: 24px;
 
@@ -120,7 +117,6 @@ section.features {
 section.pricing {
 
     .container {
-        margin: 110px auto;
 
         .plan {
             width: 30%;
@@ -154,11 +150,11 @@ section.pricing {
 
             }
 
-            h4.planName {
+            h4.plan-name {
                 margin: 20px 0;
             }
 
-            p.planDescription {
+            p.plan-description {
                 line-height: 1.5;
 
             }
@@ -185,17 +181,16 @@ section.pricing {
 
 section.works {
     .container {
-        margin: 110px auto;
 
         .work {
             width: 24%;
 
-            .photoWrapper {
+            .photo-wrapper {
                 display: flex;
                 position: relative; // So I can move .left and .right divs according to it.
 
-                .photoBox {
-                    @include squarePhoto;
+                .photo-box {
+                    @include square-photo;
                 }
 
                 &:hover {
@@ -251,17 +246,24 @@ section.works {
 
 section.team {
     .container {
-        margin: 110px auto;
 
         .member {
             width: 20%;
             display: flex;
             align-items: center;
             flex-direction: column;
+
+            &:nth-child(3) {
+                margin-left: 40px;
+            }
+
+            &:last-child {
+                margin-right: 40px;
+            }
         }
 
-        .photoBox {
-            @include squarePhoto;
+        .photo-box {
+            @include square-photo;
             width: 80%;
             border-radius: 50%;
 
@@ -281,7 +283,7 @@ section.team {
             color: #686d74;
         }
 
-        .socialMemberContainer {
+        .social-member-container {
             width: 100%;
             margin-top: 15px;
             display: flex;
@@ -296,11 +298,239 @@ section.team {
 }
 
 section.stats {
+
     .container {
+
         .stat {
-            img {
-                width: 40px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            &:nth-child(3) {
+                margin-left: 200px;
             }
+
+            &:nth-child(6) {
+                margin-right: 200px;
+            }
+
+            img {
+                height: 40px;
+                filter: grayscale(50%);
+            }
+
+            h4 {
+                margin-top: 20px;
+            }
+        }
+
+        .testimonial {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .photo-wrapper {
+                display: flex;
+                justify-content: center;
+                width: 80%; // To replicate the size of previous images
+                margin-top: 70px;
+
+
+                .photo-box {
+                    @include square-photo;
+                    width: 20%; // To replicate the size of previous images
+                    border-radius: 50%;
+
+                }
+            }
+
+            h4 {
+                margin-top: 20px;
+            }
+
+            p {
+                margin-top: 10px;
+            }
+
+            .quote {
+                margin-top: 20px;
+                position: relative;
+                width: 70%;
+
+                h3,
+                    {
+                    margin: 0;
+                    padding: 0 130px 0 130px;
+                }
+
+                img {
+                    width: 17px;
+                }
+
+                .left-quote {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .right-quote {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+
+
+    }
+}
+
+section.contact {
+    .container {
+
+        .flex-child {
+            text-align: center;
+
+            &:nth-child(3) {
+                margin-left: 100px;
+            }
+
+            &:nth-child(5) {
+                margin-right: 100px;
+            }
+
+            address {
+                font-style: normal;
+                font-family: 'Source Sans Pro', sans-serif;
+                color: #898989;
+                font-weight: normal;
+                text-align: center;
+            }
+
+            img {
+                height: 25px;
+                margin-bottom: 15px;
+            }
+
+
+        }
+
+        form {
+            margin: 70px auto 0 auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input,
+            textarea {
+                border: 2px solid #000;
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 20px;
+                font-style: normal;
+                font-family: 'Source Sans Pro', sans-serif;
+                color: #898989;
+                font-weight: 400;
+                font-size: 18px;
+                resize: none;
+
+
+                &::placeholder {
+                    font-style: normal;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    color: #898989;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+
+            input[type=submit] {
+                width: 35%;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: #ffffff;
+                background: #000;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+}
+
+footer {
+    background: #010101;
+
+    .container {
+
+        h2 {
+            color: #ffffff
+        }
+
+        form {
+            margin: 45px auto 0 auto;
+            width: 100%;
+
+            input {
+                border: 0;
+                padding: 20px;
+                font-style: normal;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 18px;
+
+                &::placeholder {
+                    font-style: normal;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    color: #898989;
+                    font-weight: 400;
+                }
+            }
+
+            input[type=email] {
+                width: 80%;
+                color: #898989;
+                font-weight: 400;
+                font-size: 18px;
+            }
+
+            input[type=submit] {
+                width: 19%; // So that submit input fits on the same line as email input
+                font-weight: 900;
+                text-transform: uppercase;
+                color: #000000;
+                background: #ffffff;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    .end-wrapper {
+        margin-top: 100px;
+        width: 100%;
+        color: #ffffff;
+        font-family: 'Source Sans Pro', sans-serif;
+        display: flex;
+        flex-direction: row;
+        line-height: 1.5;
+
+        address {
+            font-style: normal;
+            margin-right: 100px;
+        }
+
+        .flex-child {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            margin-right: 100px;
+
         }
     }
 }

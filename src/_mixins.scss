@@ -1,17 +1,4 @@
-// e.g.
-
-// @mixin heading2 {
-//     width: 100%;
-//     font-size: 30px;
-//     font-weight: 300;
-// }
-
-// then to use it:
-// .join {
-//     @include heading2;
-// }
-
-@mixin squarePhoto {
+@mixin square-photo {
     width: 100%;
     position: relative;
     background-size: cover; // Manages images
