@@ -5,14 +5,13 @@ header {
     .container {
         position: relative;
         align-items: center;
-        padding-top: 50px;
+        padding: 50px 0 0 0;
         height: 90px; // Equals padding+image height
 
 
-        .menu {
+        .menu-button {
             height: 15px;
             cursor: pointer;
-
         }
 
         .logo-container {
@@ -22,8 +21,18 @@ header {
             display: flex;
             align-items: center;
 
+            @include mobile {
+                position: relative; // To cancel out previous positioning of web layout
+                left: 0;
+                transform: translateX(0);
+            }
+
             img {
                 height: 40px;
+
+                @include tablet-portrait {
+                    height: 30px;
+                }
             }
 
             p {
@@ -31,17 +40,33 @@ header {
                 font-family: myriad-pro, sans-serif;
                 font-size: 20px;
                 color: #000;
+
+                @include tablet-portrait {
+                    font-size: 16px;
+
+                }
             }
         }
 
         .social-container {
+            @include mobile {
+                display: none;
+            }
 
             img {
                 height: 20px;
                 padding-left: 24px;
-            }
 
+                @include tablet-portrait {
+                    height: 15px;
+                    padding-left: 10px;
+                }
+            }
         }
+    }
+
+    nav {
+        display: none;
     }
 }
 
@@ -73,7 +98,6 @@ section.landing {
                 margin-top: 35px;
                 width: 200px;
                 padding: 14px 30px;
-
             }
         }
     }
@@ -95,9 +119,18 @@ section.features {
             display: flex;
             text-align: left;
 
+            @include mobile {
+                width: 100%;
+            }
+
             .feature-wrapper {
                 margin-left: 35px; // So it does not cover the image
-                padding-left: 24px;
+                padding-left: 20px;
+
+                @include tablet-portrait {
+                    margin-left: 25px; // According to img width on this medium
+                    padding-left: 0;
+                }
 
                 p {
                     margin-top: 15px;
@@ -108,9 +141,22 @@ section.features {
                 position: absolute;
                 width: 35px;
                 left: 0;
+
+                @include mobile {
+                    left: 50%;
+                    top: -30px;
+                    transform: translateX(-50%, -50%)
+                }
+
+                @include tablet-portrait {
+                    width: 25px;
+                }
+
+                @include mobile {
+                    width: 25px;
+                }
             }
         }
-
     }
 }
 
@@ -118,12 +164,16 @@ section.pricing {
 
     .container {
 
+
         .plan {
             width: 30%;
             display: flex;
             flex-direction: column;
             align-items: center;
 
+            @include mobile {
+                width: 100%;
+            }
 
             .circle {
                 position: relative;
@@ -163,6 +213,10 @@ section.pricing {
                 margin-top: 30px;
                 text-transform: uppercase;
                 font-size: 25px;
+
+                @include mobile {
+                    margin-top: 20px;
+                }
             }
 
             .line {
@@ -184,6 +238,10 @@ section.works {
 
         .work {
             width: 24%;
+
+            @include mobile {
+                width: 100%;
+            }
 
             .photo-wrapper {
                 display: flex;
@@ -210,9 +268,15 @@ section.works {
                     position: absolute;
                     bottom: 0;
                     display: flex;
+                    align-items: center;
                     color: #ffffff;
                     font-family: 'Source Sans Pro', sans-serif;
                     font-size: 10px;
+
+                    @include mobile {
+                        font-size: 16px;
+
+                    }
                 }
 
                 .left {
@@ -250,15 +314,12 @@ section.team {
         .member {
             width: 20%;
             display: flex;
+            justify-content: space-around;
             align-items: center;
             flex-direction: column;
 
-            &:nth-child(3) {
-                margin-left: 40px;
-            }
-
-            &:last-child {
-                margin-right: 40px;
+            @include tablet-portrait {
+                width: 50%;
             }
         }
 
@@ -267,6 +328,9 @@ section.team {
             width: 80%;
             border-radius: 50%;
 
+            @include tablet-portrait {
+                width: 60%;
+            }
         }
 
         h4,
@@ -300,19 +364,12 @@ section.team {
 section.stats {
 
     .container {
+        justify-content: space-around;
 
         .stat {
             display: flex;
             align-items: center;
             flex-direction: column;
-
-            &:nth-child(3) {
-                margin-left: 200px;
-            }
-
-            &:nth-child(6) {
-                margin-right: 200px;
-            }
 
             img {
                 height: 40px;
@@ -332,15 +389,22 @@ section.stats {
             .photo-wrapper {
                 display: flex;
                 justify-content: center;
-                width: 80%; // To replicate the size of previous images
+                width: 80%; // To replicate the size of same img used above
                 margin-top: 70px;
+
+                @include tablet-portrait {
+                    width: 50%; // To replicate the size of same img used above in another medium
+                }
 
 
                 .photo-box {
                     @include square-photo;
-                    width: 20%; // To replicate the size of previous images
+                    width: 20%; // To replicate the size of same img used above
                     border-radius: 50%;
 
+                    @include tablet-portrait {
+                        width: 60%; // To replicate the size of same img used above in another medium
+                    }
                 }
             }
 
@@ -360,7 +424,7 @@ section.stats {
                 h3,
                     {
                     margin: 0;
-                    padding: 0 130px 0 130px;
+                    padding: 0 10% 0 10%; // Percentages used so that padding adapts to different screen sizes
                 }
 
                 img {
@@ -387,16 +451,21 @@ section.stats {
 
 section.contact {
     .container {
+        justify-content: space-around;
+
+        @include tablet-portrait {
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+        }
+
 
         .flex-child {
             text-align: center;
+            width: 33%;
 
-            &:nth-child(3) {
-                margin-left: 100px;
-            }
-
-            &:nth-child(5) {
-                margin-right: 100px;
+            @include tablet-portrait {
+                width: fit-content;
             }
 
             address {
@@ -411,8 +480,6 @@ section.contact {
                 height: 25px;
                 margin-bottom: 15px;
             }
-
-
         }
 
         form {
@@ -421,6 +488,10 @@ section.contact {
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @include tablet-portrait {
+                width: 100%;
+            }
 
             input,
             textarea {
@@ -435,7 +506,6 @@ section.contact {
                 font-size: 18px;
                 resize: none;
 
-
                 &::placeholder {
                     font-style: normal;
                     font-family: 'Source Sans Pro', sans-serif;
@@ -446,7 +516,7 @@ section.contact {
             }
 
             input[type=submit] {
-                width: 35%;
+                width: 200px;
                 font-weight: 900;
                 text-transform: uppercase;
                 color: #ffffff;
@@ -456,7 +526,6 @@ section.contact {
                     cursor: pointer;
                 }
             }
-
         }
     }
 }
@@ -473,6 +542,13 @@ footer {
         form {
             margin: 45px auto 0 auto;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            @include tablet-portrait {
+                flex-direction: column;
+                align-items: center;
+            }
 
             input {
                 border: 0;
@@ -494,43 +570,59 @@ footer {
                 color: #898989;
                 font-weight: 400;
                 font-size: 18px;
+                border-right: 2px solid black;
+
+
+                @include tablet-portrait {
+                    width: 100%;
+
+                }
             }
 
             input[type=submit] {
-                width: 19%; // So that submit input fits on the same line as email input
+                width: 20%;
                 font-weight: 900;
                 text-transform: uppercase;
                 color: #000000;
                 background: #ffffff;
 
+
+                @include tablet-portrait {
+                    width: 200px;
+                    margin-top: 20px;
+                }
+
                 &:hover {
                     cursor: pointer;
                 }
             }
-
-        }
-    }
-
-    .end-wrapper {
-        margin-top: 100px;
-        width: 100%;
-        color: #ffffff;
-        font-family: 'Source Sans Pro', sans-serif;
-        display: flex;
-        flex-direction: row;
-        line-height: 1.5;
-
-        address {
-            font-style: normal;
-            margin-right: 100px;
         }
 
-        .flex-child {
-            margin-top: 0;
+
+        .end-wrapper {
+            margin-top: 100px;
+            width: 100%;
+            color: #ffffff;
+            font-family: 'Source Sans Pro', sans-serif;
             display: flex;
-            flex-direction: column;
-            margin-right: 100px;
+            justify-content: space-between;
+            line-height: 1.5;
 
+            @include mobile {
+                font-size: 14px;
+            }
+
+            address {
+                font-style: normal;
+            }
+
+            .flex-child {
+                margin-top: 0;
+                display: flex;
+                flex-direction: column;
+
+
+            }
         }
     }
 }

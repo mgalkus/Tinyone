@@ -22,7 +22,7 @@
 <body>
     <header>
         <div class="container">
-            <img src="images/bars-solid.svg" alt="Menu" class="menu">
+            <img src="images/bars-solid.svg" alt="Menu" class="menu-button">
             <div class="logo-container">
                 <img src="images/fingerprint-solid.svg" alt="Fingerprint">
                 <p>tinyone</p>
@@ -36,7 +36,21 @@
                 </a>
                 <a href=""> <img src="images/pinterest-brands.svg" alt="Pinterest">
                 </a> </div>
+
         </div>
+        <nav>
+            <a href=""><img src="images/times-solid.svg" alt="Exit"></a>
+            <ul class="list">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#stats">Statistics</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#news">Newsletter</a></li>
+            </ul>
+        </nav>
+
     </header>
     <section class="landing">
         <div class="container">
@@ -59,7 +73,7 @@
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A quo cupiditate pariatur enim esse quis
                 libero aperiam nihil alias iusto libero aperiam nihil alias iustolibero aperiam nihil alias iusto?</h3>
             <div class="feature flex-child">
-                <div class="featureWrapper">
+                <div class="feature-wrapper">
                     <h4>Fully responsive</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum blanditiis officiis earum
                         voluptatibus eveniet possimus?</p>
@@ -106,7 +120,7 @@
         </div>
     </section>
     <section class="pricing">
-        <div class="container">
+        <div class="container" id="pricing">
             <h2>Pricing and Free Trial</h2>
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolor quae ipsum quia doloribus
                 consequuntur harum quod distinctio sapiente adipisci!</h3>
@@ -140,7 +154,7 @@
         </div>
     </section>
     <section class="works">
-        <div class="container">
+        <div class="container" id="works"> 
             <h2>Our works</h2>
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolor quae ipsum quia doloribus
                 consequuntur harum quod distinctio sapiente adipisci!</h3>
@@ -277,7 +291,7 @@
         </div>
     </section>
     <section class="team">
-        <div class="container">
+        <div class="container" id="team">
             <h2>Our team</h2>
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolor quae ipsum quia doloribus
                 consequuntur harum quod distinctio sapiente adipisci!</h3>
@@ -339,7 +353,7 @@
             </div>
     </section>
     <section class="stats">
-        <div class="container">
+        <div class="container" id="stats">
             <h2>Stats & Testimonials</h2>
             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, illum pariatur eaque optio natus
                 veniam mollitia perspiciatis inventore deserunt quod?</h3>
@@ -380,7 +394,7 @@
         </div>
     </section>
     <section class="contact">
-        <div class="container">
+        <div class="container" id="contact">
             <h2>Keep in touch with us</h2>
             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, illum pariatur eaque optio natus
                 veniam mollitia perspiciatis inventore deserunt quod?</h3>
@@ -397,7 +411,7 @@
             <div class="flex-child">
                 <img src="images/phone-square-solid.svg" alt="Phone">
                 <h4>Phone</h4>
-                <address> <a href="tel:+844-1234-56789"></a>i+844 1234 56789</address>
+                <address> <a href="tel:+844-1234-56789"></a>+844 1234 56789</address>
             </div>
             <form action="">
                 <input type="email" placeholder="Email">
@@ -408,7 +422,7 @@
 
     </section>
     <footer>
-        <div class="container">
+        <div class="container" id="news"> >
             <h2>Sign up for our newsletter</h2>
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolor quae ipsum quia doloribus
                 consequuntur harum quod distinctio sapiente adipisci!</h3>
@@ -417,29 +431,29 @@
                 <input type="submit" value="Submit">
             </form>
             <div class="end-wrapper">
-                <div class="flex-child">
+                <div class="address flex-child">
                     <address>Tinyone Ltd <br>66 Dan van Gu, <br>Ha noi, Vietnam</address>
                     <address><a href="mailto:contact@tinyone.com">contact@tinyone.com</a></address>
                     <address> <a href="tel:+844-1234-56789"></a>+844 1234 56789</address>
                 </div>
-                <div class="flex-child">
+                <div class="links flex-child">
                     <a href="">Examples</a>
                     <a href="">Shops</a>
                     <a href="">Licences</a>
                 </div>
-                <div class="flex-child">
+                <div class="links flex-child">
                     <a href="">Contact</a>
                     <a href="">About</a>
                     <a href="">Privacy</a>
                     <a href="">Terms</a>
 
                 </div>
-                <div class="flex-child">
+                <div class="links flex-child">
                     <a href="">Download</a>
                     <a href="">Support</a>
                     <a href="">Documents</a>
                 </div>
-                <div class="flex-child">
+                <div class="links flex-child">
                     <a href="">Media</a>
                     <a href="">Blog</a>
                     <a href="">Forums</a>
@@ -448,6 +462,7 @@
         </div>
 
     </footer>
+    <script src="script.js"></script>
 
 </body>
 

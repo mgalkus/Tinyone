@@ -9,6 +9,45 @@
     flex-wrap: wrap;
 }
 
+.active-nav {
+    display: block;
+    position: fixed;
+    z-index: 900;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    img {
+        position: absolute;
+        width: 20px;
+        right: 0;
+        margin: 20px;
+    }
+
+    ul {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+
+    }
+
+    li {
+        margin-bottom: 25px;
+        font-size: 26px;
+        font-family: myriad-pro, sans-serif;
+        color: #2d2d2d;
+    }
+
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
 .flex-child {
     margin-top: 70px;
 }
@@ -32,12 +71,20 @@ p {
     color: #898989;
     font-weight: normal;
     text-align: center;
+}
 
+p {
+    @include tablet-portrait {}
 }
 
 h3 {
     margin: 20px auto 0 auto;
     padding: 0 70px 0 70px;
+
+    @include tablet-portrait {
+        padding: 0 20px 0 20px;
+
+    }
 }
 
 h4 {
